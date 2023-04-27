@@ -49,7 +49,7 @@
 
 <body>
     <!-- Nav -->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
         <div class="container-fluid">
             <div class="navbar-brand" href="index.html">
                 <div id="logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 203.29 133.96">
@@ -73,10 +73,11 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Me</a>
+                        <a class="nav-link" href="#about">About Me</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Portfolio</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                        
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href='#contact'">Contact</a>
@@ -118,6 +119,7 @@
                         with more knowledge about the IT world. If you have any web/design
                         projects that require assistance or help, feel free to contact me.
                     </p>
+                    <a href="./Images/Resume.pdf" target="_blank" id="resume">Click here to view CV.</a>
                 </div>
                 <div class="col">
                     <img src="./Images/me.jpg" alt="Me" id="aboutpic">
@@ -140,7 +142,7 @@
                             <div class="card-body">
                             <h5 class="card-title">Sketches</h5>
                             <p class="card-text">Sketches I made through self-taught and inspirations.</p>
-                            <a href="#" class="btn btn-primary">View Sketches</a>
+                            <a href="sketches.html" class="btn btn-primary">View Sketches</a>
                         </div>
                     </div>
                 </div>
@@ -150,7 +152,7 @@
                             <div class="card-body">
                             <h5 class="card-title">Adobe</h5>
                             <p class="card-text">Used Adobe to create and edit images</p>
-                            <a href="#" class="btn btn-primary">View Adobe</a>
+                            <a href="adobe.html" class="btn btn-primary">View Adobe</a>
                         </div>
                     </div>
                 </div>
@@ -158,9 +160,19 @@
                     <div class="card" style="width: 18rem;">
                         <img src="./Images/ExerciseTracker.png" class="card-img-top" alt="Coding">
                             <div class="card-body">
-                            <h5 class="card-title">Coding</h5>
+                            <h5 class="card-title">Front-end Web Development</h5>
                             <p class="card-text">Using Java, Python, HTML, PHP and more to create and personalise projects.</p>
-                            <a href="#" class="btn btn-primary">View Coding Projects</a>
+                            <a href="coding.html" class="btn btn-primary">View Coding Projects</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./Images/VR.png" class="card-img-top" alt="VR recording">
+                            <div class="card-body">
+                            <h5 class="card-title">Virtual Reality</h5>
+                            <p class="card-text">Using C# and Unity to create VR games.</p>
+                            <a href="#" class="btn btn-primary">View VR Projects</a>
                         </div>
                     </div>
                 </div>
@@ -181,10 +193,31 @@
         </div>
         <br><br><br><br><br><br><br><br>
 
+        <div class="footer" style="background-color:blanchedalmond;padding:5px;">
+            <hr>
+            <p style="text-align: center;font-size: 15px;">Copyright © 2023 | Celest's Portfolio Website</p>
+        </div>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up"></i></button>
 
     <!-- Script links -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
    <!-- Scripts -->
    <script tyoe="text/javascript" src="./scripts.js"></script>
+   <script>
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+   </script>
 </body>
 </html>
